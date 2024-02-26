@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test')
 const path = require('path');
 
-test.skip('Upload file', async({page})=>{
+test.only('Upload file', async({page})=>{
 
     await page.goto('https://ps.uci.edu/~franklin/doc/file_upload.html')
 
@@ -13,7 +13,7 @@ test.skip('Upload file', async({page})=>{
     await page.close()
 })
 
-test.skip('Upload multiple files', async({page})=>{
+test('Upload multiple files', async({page})=>{
 
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php')
 

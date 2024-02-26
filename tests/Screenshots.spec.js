@@ -23,6 +23,6 @@ test('full page screenshot', async ({page}) =>{
 test.only('locator screenshot', async ({page}) =>{
 
     await page.goto('https://testautomationpractice.blogspot.com/')
-    await page.locator("#productTable").screenshot({ path: 'test-results/Screenshots/' + formattedDate + 'Locator.png', fullPage:true })
+    await page.locator("#productTable").screenshot({ path: 'test-results/Screenshots/' + formattedDate + 'Locator.png'})
 
 })

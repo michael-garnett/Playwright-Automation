@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test')
 
-test.skip('select one item from table', async ({page}) =>{
+test('select one item from table', async ({page}) =>{
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     const table = await page.locator("#productTable")
@@ -39,7 +39,7 @@ async function selectProduct(rows, page, name) {
 }
 
 
-test.skip('select multiple items from table', async ({page}) =>{
+test('select multiple items from table', async ({page}) =>{
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     const table = await page.locator("#productTable")

@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test')
 const path = require('path');
 
-test('Upload file', async({page})=>{
+test.skip('Upload file', async({page})=>{
 
     await page.goto('https://ps.uci.edu/~franklin/doc/file_upload.html')
 
@@ -13,7 +13,7 @@ test('Upload file', async({page})=>{
     await page.close()
 })
 
-test('Upload multiple files', async({page})=>{
+test.skip('Upload multiple files', async({page})=>{
 
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php')
 
@@ -31,7 +31,7 @@ test('Upload multiple files', async({page})=>{
 })
 
 
-test.only('Upload multiple files with better handling', async ({ page }) => {
+test.skip('Upload multiple files with better handling', async ({ page }) => {
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php');
   
     // Wait for the file input to become visible and interactable

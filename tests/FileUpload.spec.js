@@ -1,15 +1,21 @@
-const {test, expect} = require('@playwright/test')
+const {test, expect, firefox} = require('@playwright/test')
 const path = require('path');
 
-test.skip('Upload file', async({page})=>{
-
+test('Upload file', async({page, browserName})=>{
+  if (browserName == firefox) {
+    test.skip()
+  }
     await page.goto('https://ps.uci.edu/~franklin/doc/file_upload.html')
     await page.waitForSelector('input[name="userfile"]')
     await page.locator('input[name="userfile"]').setInputFiles('tests\Alerts.spec.js')
     await page.close()
+    
 })
 
-test.skip('Upload multiple files', async({page})=>{
+test.skip('Upload multiple files', async({page, browserName})=>{
+  if (browserName == firefox) {
+    test.skip()
+  }
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php')
     await page.waitForSelector('//input[@id="filesToUpload"]')
     await page.locator('//input[@id="filesToUpload"]')
@@ -21,8 +27,11 @@ test.skip('Upload multiple files', async({page})=>{
 })
 
 
-test.skip('Upload multiple files with better handling', async ({ page }) => {
-    await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php');
+test('Upload multiple files with better handling', async ({ page, browserName }) => {
+  if (browserName == firefox) {
+    test.skip()
+  }  
+  await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php');
     // Wait for the file input to become visible and interactable
     await page.waitForSelector('//input[@id="filesToUpload"]', { state: 'visible' });
     const filePaths = [

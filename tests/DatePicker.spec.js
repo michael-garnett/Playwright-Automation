@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test')
 
-test('Date Picker', async({page})=>{
+test.fixme('Date Picker@old', async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     //await page.fill(#datepicker','02/20/2024')

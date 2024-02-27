@@ -1,0 +1,2 @@
+Number of colums: 4
+Number of rows: 5

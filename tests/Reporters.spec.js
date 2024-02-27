@@ -1,5 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
+//allure generate allure-results -o allure-report --clean
+//allure open  allure-report
+
 test('Test1', async ({ page }) => {
     await page.goto('https://www.demoblaze.com/index.html');
     await expect(page).toHaveTitle('STORE');

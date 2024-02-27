@@ -19,7 +19,7 @@ test('Handle Tabs', async () => {
 
 })
 
-test.only('Handle Multiple Tabs', async () => {
+test('Handle Multiple Tabs', async () => {
             
   const browser=await chromium.launch()
   const context=await browser.newContext()

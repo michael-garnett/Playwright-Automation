@@ -9,7 +9,6 @@ exports.Cart = class Cart {
     async checkProductInCart(productName) {
         const productsInCart=await this.page.$$(this.noOfProducts)
         for (const product of productsInCart) {
-            console.log(await product.textContent())
             if (productName === await product.textContent()) {
                 return true;
                break;

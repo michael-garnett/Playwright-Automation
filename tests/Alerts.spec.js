@@ -49,7 +49,7 @@ test('Prompt Dialog-Alert with Textbox and Ok and Cancel', async({page})=>{
         expect(dialog.type()).toContain('prompt')
         expect(dialog.message()).toContain('Please enter your name:')
         expect(dialog.defaultValue()).toContain('Harry Potter')
-        await dialog.accept('SDET-QA')
+        await dialog.accept('Senior QA')
     })
 
     await page.locator('button[onclick="myFunctionPrompt()"]').click()
